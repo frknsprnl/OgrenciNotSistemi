@@ -5,14 +5,17 @@ public class Course {
     String prefix;
     int note;
     Teacher teacher;
+    int oralGrade;
+    double oralGradeCoef;
 
-    Course(String name, String code, String prefix) {
+    Course(String name, String code, String prefix, double oralGradeCoef) {
 
         this.name = name;
         this.code = code;
         this.prefix = prefix;
         this.note = 0;
-
+        this.oralGrade = 0;
+        this.oralGradeCoef = oralGradeCoef;
     }
 
     void addTeacher(Teacher teacher) {
@@ -24,7 +27,6 @@ public class Course {
         }
 
     }
-
     void printTeacherInfo() {
         this.teacher.printTeacher();
     }
